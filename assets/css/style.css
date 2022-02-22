@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: poppins;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    margin-top: 1rem;
+}
+#error{
+    color: #ff0000;
+}
+.wrapper{
+    width: 450px;
+    padding: 1rem;
+    background-color: #fff;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+header{
+    padding: 1rem;
+    background-color: #f8f8f8;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.input-fields{
+   padding-bottom: 2rem;
+    position: relative;
+}
+label{
+    display: block;
+}
+.input-fields input{
+    padding: .7rem 1rem;
+    font-family: poppins;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+}
+.input-fields input:focus{
+    outline: 1px solid #333;
+}
+.list-wrapper{
+    background-color: #f8f8f8;
+    padding: 1rem;
+}
+.list-wrapper .title{
+    margin-bottom: 1rem;
+}
+
+#follower-list{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    max-height: 600px;
+    overflow-y: scroll;
+    padding-right: 1rem;
+}
+#follower-list::-webkit-scrollbar{
+    width: 2px;
+    background: #eee;
+}
+#follower-list::-webkit-scrollbar-thumb{
+    background-color: rgb(53, 46, 46);
+}
+#follower-list li{
+    margin: 1rem 0rem;
+    background-color: #ffffff;
+    position: relative;
+    padding: 1rem;
+
+}
+#follower-list li a{
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    color: #222;
+}
+#follower-list .avatar{
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    margin-right: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.avatar img{
+    max-width: 100%;
+    height: auto;
+}
+#follower-list h3{
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+}
