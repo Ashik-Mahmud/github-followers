@@ -13,4 +13,15 @@ This is simple follower checker application based on github api this application
  and many more.....
  ~~~
 
- 
+# Features
+- You can search any users using input field
+- After the search you will get a follower
+- Each follower has a own repo link with them stuff
+- Also has error handling if input field empty.
+
+# Get a live link go to about section.
+
+# Demo Preview about this project.
+![imageScreenshot](./preview.png)
+
+ > Thanks for reach out me on github
