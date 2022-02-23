@@ -28,7 +28,7 @@ const fetchFollowers = (event) => {
                     }
                 })
                 .then(response => response.json())
-                .then(data => displayFollower(data))
+                .then(data => displayFollower(data, userValue))
         }
     }
 }
@@ -37,19 +37,26 @@ inputFields.addEventListener('keypress', fetchFollowers)
 
 /* step 3 show all of follower in the follower list  */
 
-const displayFollower = (followers) => {
-    followers.forEach(follower => {
-        if (follower) {
-            const li = document.createElement('li');
-            li.innerHTML = `<a href="${follower.html_url}" target="_blank">
-                            <div class="avatar">
-                                <img src="${follower.avatar_url}" alt="${follower.login}">
-                            </div>
-                             <div class="details">
-                                <h3>${follower.login}</h3>
-                            </div>
-                        </a>`;
-            followerList.appendChild(li);
-        }
-    });
+const displayFollower = (followers, value) => {
+    if (followers.length === 0) {
+        const errorTag = document.createElement('small');
+        errorTag.style = 'display:block;text-align:center;color:#f00';
+        errorTag.innerHTML = `User not found by this <strong>${value}</strong> name`;
+        followerList.append(errorTag);
+    } else {
+        followers.forEach(follower => {
+            if (follower) {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="${follower.html_url}" target="_blank">
+                                <div class="avatar">
+                                    <img src="${follower.avatar_url}" alt="${follower.login}">
+                                </div>
+                                 <div class="details">
+                                    <h3>${follower.login}</h3>
+                                </div>
+                            </a>`;
+                followerList.appendChild(li);
+            }
+        });
+    }
 }
